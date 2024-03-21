@@ -1,0 +1,47 @@
+<resources>
+    <string name="app_name">Lee</string>
+
+    <!--    Login & Registration-->
+    <string name="h_login">Login</string>
+    <string name="h_sigin">SignIn</string>
+    <string name="btn">Submit</string>
+    <string name="age">Enter Your Age</string>
+    <string name="activity">Enter the Activity</string>
+    <string name="name">Enter Your Name</string>
+    <string name="ph_no">Enter Your Phone Number</string>
+    <string name="mail">Enter Your MailID</string>
+    <string name="pass">Enter Your Password</string>
+    <string name="already_user">Already Have Account</string>
+    <string name="new_user">New User?</string>
+
+    <!--    Splash Screen-->
+    <string name="sp_nxt_btn">Next</string>
+    <string name="sp_nxt_btn_ch">Enter</string>
+    <string name="sp_prev_btn">Previous</string>
+    <string name="sp_skip_btn">Skip</string>
+    <string name="sp_title1">Top 10 Position in Chennai</string>
+    <string name="sp_desc1">Consecutive Training and determination for better Future Stars</string>
+    <string name="sp_title2">Determination Development  Discipline</string>
+    <string name="sp_desc2">We cultivate the Essential 3d\'s on Students as part to Coaching </string>
+    <string name="sp_title3">Wide Range of Sports</string>
+    <string name="sp_desc3">We Offer Various Sports with Better quality to students And better assurance to parents </string>
+    <string name="Sp_cricket">cricket</string>
+    <string name="Sp_soccer">soccer</string>
+    <string name="Sp_throwball">ThrowBall</string>
+    <string name="Sp_badminton">Badminton</string>
+    <string name="Sp_hockey">Hockey</string>
+    <string name="Sp_volleyball">VolleyBall</string>
+
+
+
+
+
+
+    <string name="select_activity">select Your Activity</string>
+    <string name="error_mail">Enter Your Correct Mail Adrress</string>
+    <string name="error_pass">Enter The Corect Password</string>
+    <string name="s_gender">Enter Your Gender</string>
+    <string name="s_btn_signup">Signup</string>
+
+
+</resources>

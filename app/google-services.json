@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "781836468404",
+    "project_id": "sports-app-lee",
+    "storage_bucket": "sports-app-lee.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:781836468404:android:ed2ad5bf539641ad5417e1",
+        "android_client_info": {
+          "package_name": "com.example.lee"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB6_7a2g0G32fP5_IRw-auRiH5E2tPNV_c"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
