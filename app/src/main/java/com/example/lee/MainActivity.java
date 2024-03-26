@@ -17,7 +17,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
-        cardView = findViewById(R.id.c1);
+        cardView = findViewById(R.id.c);
 
         cardView.setPreventCornerOverlap(false);
 

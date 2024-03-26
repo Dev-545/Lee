@@ -73,7 +73,7 @@ public class OnBoardingScreen extends AppCompatActivity {
                 if (getItem(0) <2){
                     slideViewPager.setCurrentItem(getItem(1), true);
                 }else{
-                    Intent intent = new Intent(OnBoardingScreen.this, LoginScreen.class);
+                    Intent intent = new Intent(OnBoardingScreen.this, MainActivity.class);
                     startActivity(intent);
                     finish();
                 }
@@ -82,7 +82,7 @@ public class OnBoardingScreen extends AppCompatActivity {
         skipbt.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(OnBoardingScreen.this, LoginScreen.class);
+                Intent intent = new Intent(OnBoardingScreen.this, MainActivity.class);
                 startActivity(intent);
                 finish();
 

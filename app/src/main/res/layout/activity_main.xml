@@ -15,12 +15,21 @@
         android:padding="15dp">
 <!-- Cricket       -->
         <com.google.android.material.card.MaterialCardView
+            android:id="@+id/c"
             android:layout_width="match_parent"
             android:layout_height="120dp"
             android:layout_marginVertical="15dp"
             app:cardElevation="55px"
             app:cardCornerRadius="15px"
-            android:background="@drawable/cricket_bg">
+            >
+            <ImageView
+
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/cricket_bg"
+                android:adjustViewBounds="true"
+                android:scaleType="centerCrop"/>
+
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -40,8 +49,14 @@
             android:layout_height="100dp"
             android:layout_marginVertical="15dp"
             app:cardElevation="15px"
-            app:cardCornerRadius="10px"
-            android:background="@drawable/cricket_bg">
+            app:cardCornerRadius="10px">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/soccer_bg"
+                android:adjustViewBounds="true"
+                android:scaleType="centerCrop"/>
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
