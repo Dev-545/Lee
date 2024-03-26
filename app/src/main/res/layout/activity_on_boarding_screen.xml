@@ -22,7 +22,7 @@
     <androidx.viewpager.widget.ViewPager
         android:id="@+id/slideViewPager"
         android:layout_width="match_parent"
-        android:layout_height="750dp" />
+        android:layout_height="600dp" />
 
     <LinearLayout
         android:layout_width="match_parent"
