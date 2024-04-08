@@ -18,7 +18,7 @@
     <string name="sp_nxt_btn">Next</string>
     <string name="sp_nxt_btn_ch">Enter</string>
     <string name="sp_prev_btn">Previous</string>
-    <string name="sp_skip_btn">Skip</string>
+    <string name="skip_button_text">Skip</string>
     <string name="sp_title1">Top 10 Position in Chennai</string>
     <string name="sp_desc1">Consecutive Training and determination for better Future Stars</string>
     <string name="sp_title2">Determination Development  Discipline</string>
@@ -34,8 +34,8 @@
 
 
     <string name="select_activity">select Your Activity</string>
-    <string name="error_mail">Enter Your Correct Mail Adrress</string>
-    <string name="error_pass">Enter The Corect Password</string>
+    <string name="error_mail">Enter Your Correct Mail Address</string>
+    <string name="error_pass">Enter The Correct Password</string>
     <string name="s_gender">Enter Your Gender</string>
     <string name="s_btn_signup">Signup</string>
     <string name="hm_explore">Explore</string>
