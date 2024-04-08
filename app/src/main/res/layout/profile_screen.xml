@@ -1,19 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="horizontal"
+    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
     <ImageView
-        android:id="@+id/spinner_icon"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/cricket"/>
-
+        android:layout_height="450px"
+        android:src="@drawable/coach_vinoth"/>
+<!--    Vinoth-->
     <TextView
-        android:id="@+id/spinner_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/Sp_cricket"
-        android:textSize="20sp" />
+        android:text="@string/coach1" />
 
 </LinearLayout>

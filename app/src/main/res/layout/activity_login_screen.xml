@@ -8,13 +8,14 @@
     android:orientation="vertical"
     android:padding="20dp"
     tools:context=".LoginScreen"
-    android:gravity="center_vertical"
+    android:gravity="center"
 >
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textSize="45sp"
         android:text="@string/h_login"
         />
 
@@ -23,15 +24,16 @@
         android:layout_height="wrap_content">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/l_mail"
+            android:id="@+id/l_phone"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/mail" />
+            android:hint="@string/ph_no" />
     </com.google.android.material.textfield.TextInputLayout>
     <TextView
     android:id="@+id/err_mail"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
+        android:visibility="invisible"
     android:text="@string/error_mail"
     />
     <com.google.android.material.textfield.TextInputLayout
@@ -56,6 +58,7 @@
         android:id="@+id/err_pass"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:visibility="invisible"
         android:text="@string/error_pass"
         />
     <Button

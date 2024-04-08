@@ -82,7 +82,7 @@ public class OnBoardingScreen extends AppCompatActivity {
         skipbt.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(OnBoardingScreen.this, MainActivity.class);
+                Intent intent = new Intent(OnBoardingScreen.this, LoginScreen.class);
                 startActivity(intent);
                 finish();
 

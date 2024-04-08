@@ -20,29 +20,25 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
 
-import java.util.Objects;
+
 
 public class LoginScreen extends AppCompatActivity {
-    TextInputEditText Mail, Password;
+    TextInputEditText Phone, Password;
     Button SignIn, Submitbtn;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login_screen);
 
-        Mail = findViewById(R.id.l_mail);
+        Phone = findViewById(R.id.l_phone);
         Password = findViewById(R.id.l_passwd);
         SignIn =   findViewById(R.id.l_signin);
         Submitbtn = findViewById(R.id.btn_submit);
-
-
-
         Submitbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(!validatemail() | validatepwd()){
+                if(!validatephone() | !validatepwd()){
 
                 }
                 else {
@@ -61,21 +57,21 @@ public class LoginScreen extends AppCompatActivity {
         });
 
     }
-    public Boolean validatemail(){
-        String val =Mail.getText().toString();
-        if(val.isEmpty()){
-            Mail.setError("UserName Cannot be Empty");
+    public Boolean validatephone(){
+        String val = Phone.getText().toString();
+        if(val.isEmpty() && val.length()<10){
+            Phone.setError("enter Correct Phone Number");
             return false;
         }
         else {
-            Mail.setError(null);
+            Phone.setError(null);
             return true;
 
         }
 
     }
     public Boolean validatepwd(){
-        String val =Password.getText().toString();
+        String val = Password.getText().toString();
         if(val.isEmpty()){
             Password.setError("Password Cannot be Empty");
             return false;
@@ -93,21 +89,21 @@ public class LoginScreen extends AppCompatActivity {
 
     }
     public void checkuser(){
-        String mailid = Mail.getText().toString().trim();
+        String phone = Phone.getText().toString().trim();
         String passwd = Password.getText().toString().trim();
 
         DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference("users");
-        Query query = databaseReference.orderByChild("mail").equalTo(mailid);
+        Query query = databaseReference.orderByChild("mobile").equalTo(phone);
 
         query.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 if (snapshot.exists()){
-                    Mail.setError(null);
-                    String pwdDB =snapshot.child(mailid).child(String.valueOf(Password)).getValue(String.class);
+                    Phone.setError(null);
+                    String pwdDB =snapshot.child(phone).child("passwd").getValue(String.class);
 
-                    if(Objects.equals(pwdDB, passwd)){
-                        Mail.setError(null);
+                    if(pwdDB.equals(passwd)){
+                        Phone.setError(null);
                         Intent intent = new Intent(LoginScreen.this, MainActivity.class);
                         startActivity(intent);
                         finish();
@@ -119,8 +115,8 @@ public class LoginScreen extends AppCompatActivity {
                     }
                 }
                 else{
-                    Mail.setError("User Not Found");
-                    Mail.requestFocus();
+                    Phone.setError("Records Not Found");
+                    Phone.requestFocus();
                 }
 
             }

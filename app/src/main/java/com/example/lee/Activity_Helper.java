@@ -1,6 +1,6 @@
 package com.example.lee;
 
-public class HelperClass {
+public class Activity_Helper {
     String Name, Age, Gender, Activity, Phone, Mail,Password;
 
 
@@ -60,7 +60,7 @@ public class HelperClass {
         Age = age;
     }
 
-    public HelperClass(String name, String age, String gender, String activity, String phone, String mail, String password) {
+    public Activity_Helper(String name, String age, String gender, String activity, String phone, String mail, String password) {
         Name = name;
         Mail = mail;
         Phone = phone;

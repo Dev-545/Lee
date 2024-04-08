@@ -38,6 +38,16 @@
     <string name="error_pass">Enter The Corect Password</string>
     <string name="s_gender">Enter Your Gender</string>
     <string name="s_btn_signup">Signup</string>
+    <string name="hm_explore">Explore</string>
+    <string name="cric_desc">Cricket embodies the triumph of spirit and skill. It\'s a sport that unites, inspires discipline, and celebrates teamwork. Every match is a testament to dedication, where players and fans alike share a fervent passion for every run scored and wicket taken, igniting aspirations worldwide.</string>
+    <string name="coach1">Vinoth</string>
+    <string name="nav_contact">Apply Now</string>
+    <string name="soc_desc">Football(Soccer) is a celebration of unity and talent. It\'s where strategy meets stamina, and every goal is a burst of joy. It teaches resilience, teamwork, and the pursuit of excellence, captivating hearts globally.a tapestry of cultures woven together by a shared passion. Each match is a dance of coordination and athleticism, inspiring dreams and celebrating collective effort</string>
+    <string name="cric_tym">05.00am -10.00 \n 04.00-09.00</string>
+    <string name="soc_tym">07.00-12.00\n03.00 -06.00</string>
+    <string name="coach">Coach</string>
+    <string name="coach_details">Coach Details</string>
+    <string name="contact">Contact form</string>
 
 
 </resources>

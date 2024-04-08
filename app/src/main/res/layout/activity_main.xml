@@ -17,10 +17,9 @@
         <com.google.android.material.card.MaterialCardView
             android:id="@+id/c"
             android:layout_width="match_parent"
-            android:layout_height="120dp"
+            android:layout_height="172dp"
             android:layout_marginVertical="15dp"
-            app:cardElevation="55px"
-            app:cardCornerRadius="15px"
+            app:cardCornerRadius="10dp"
             >
             <ImageView
 
@@ -41,15 +40,14 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="bottom|end"
-                android:text="Explore"/>
+                android:text="@string/hm_explore"/>
         </com.google.android.material.card.MaterialCardView>
 <!--        Soccer-->
         <com.google.android.material.card.MaterialCardView
             android:layout_width="match_parent"
-            android:layout_height="100dp"
+            android:layout_height="172dp"
             android:layout_marginVertical="15dp"
-            app:cardElevation="15px"
-            app:cardCornerRadius="10px">
+            app:cardCornerRadius="10dp">
 
             <ImageView
                 android:layout_width="match_parent"
@@ -68,16 +66,22 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="bottom|end"
-                    android:text="Explore"/>
+                    android:text="@string/hm_explore"/>
         </com.google.android.material.card.MaterialCardView>
 <!--        Hockey-->
         <com.google.android.material.card.MaterialCardView
             android:layout_width="match_parent"
-            android:layout_height="100dp"
+            android:layout_height="172dp"
             android:layout_marginVertical="15dp"
-            app:cardElevation="15px"
-            app:cardCornerRadius="10px"
-            android:background="@drawable/cricket_bg">
+            app:cardElevation="100dp"
+            app:cardCornerRadius="10dp"
+            >
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/hockey_bg"
+                android:adjustViewBounds="true"
+                android:scaleType="centerCrop"/>
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -89,16 +93,21 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="bottom|end"
-                android:text="Explore"/>
+                android:text="@string/hm_explore"/>
         </com.google.android.material.card.MaterialCardView>
 <!--        Throwball-->
         <com.google.android.material.card.MaterialCardView
         android:layout_width="match_parent"
-        android:layout_height="100dp"
+        android:layout_height="172dp"
         android:layout_marginVertical="15dp"
-        app:cardElevation="15px"
         app:cardCornerRadius="10px"
-        android:background="@drawable/cricket_bg">
+>
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/throwball_bg"
+                android:adjustViewBounds="true"
+                android:scaleType="centerCrop"/>
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -115,11 +124,15 @@
 <!--        Badminton-->
         <com.google.android.material.card.MaterialCardView
             android:layout_width="match_parent"
-            android:layout_height="100dp"
+            android:layout_height="172dp"
             android:layout_marginVertical="15dp"
-            app:cardElevation="15px"
-            app:cardCornerRadius="10px"
-            android:background="@drawable/cricket_bg">
+            app:cardCornerRadius="10px">
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/badminton_bg"
+                android:adjustViewBounds="true"
+                android:scaleType="centerCrop"/>
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -136,11 +149,16 @@
 <!--        VolleyBall-->
         <com.google.android.material.card.MaterialCardView
             android:layout_width="match_parent"
-            android:layout_height="100dp"
+            android:layout_height="172dp"
             android:layout_marginVertical="15dp"
-            app:cardElevation="15px"
             app:cardCornerRadius="10px"
             android:background="@drawable/cricket_bg">
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/volleyball_bg"
+                android:adjustViewBounds="true"
+                android:scaleType="centerCrop"/>
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

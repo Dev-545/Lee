@@ -15,66 +15,22 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/h_sigin"
+        android:layout_gravity="center"
+        android:textStyle="bold"
+        android:textSize="45dp"
+        android:layout_marginBottom="10dp"
         />
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/s_name"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="@string/name" />
-    </com.google.android.material.textfield.TextInputLayout>
-    <com.google.android.material.textfield.TextInputLayout
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content">
-
     <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/s_age"
+        android:id="@+id/s_name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="@string/age" />
-</com.google.android.material.textfield.TextInputLayout>
-    <RadioGroup
-        android:id="@+id/radio_gender"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/s_gender"/>
-        <com.google.android.material.radiobutton.MaterialRadioButton
-            android:id="@+id/s_r_male"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Male"/>
-        <com.google.android.material.radiobutton.MaterialRadioButton
-            android:id="@+id/s_r_female"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Female"/>
-        <com.google.android.material.radiobutton.MaterialRadioButton
-            android:id="@+id/s_r_other"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Other"/>
-    </RadioGroup>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/activity"/>
-        <Spinner
-            android:id="@+id/spinner"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:padding="18dp"
-            android:spinnerMode="dropdown"/>
-    </LinearLayout>
+        android:hint="@string/name" />
+    </com.google.android.material.textfield.TextInputLayout>
+
 
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
@@ -90,6 +46,13 @@
             android:inputType="number"
             android:hint="@string/ph_no"
             />
+        <TextView
+            android:id="@+id/err_phone"
+            android:visibility="invisible"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/error_mail"
+            />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -104,6 +67,7 @@
     </com.google.android.material.textfield.TextInputLayout>
     <TextView
         android:id="@+id/err_mail"
+        android:visibility="invisible"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/error_mail"
@@ -128,6 +92,7 @@
 
     <TextView
         android:id="@+id/err_pass"
+        android:visibility="invisible"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/error_pass"

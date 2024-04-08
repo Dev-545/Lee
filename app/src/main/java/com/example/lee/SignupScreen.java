@@ -3,7 +3,6 @@ package com.example.lee;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
@@ -18,7 +17,7 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
 public class SignupScreen extends AppCompatActivity {
-    TextInputEditText Name, Age, Phone_number, Mail, Password;
+    TextInputEditText Name, Phone_number, Mail, Password;
     String Selected_Activity;
     RadioGroup Gender;
     RadioButton R_Gender;
@@ -34,29 +33,12 @@ public class SignupScreen extends AppCompatActivity {
         setContentView(R.layout.activity_signup_screen);
 
         Name = findViewById(R.id.s_name);
-        Age = findViewById(R.id.s_age);
-        Gender = findViewById(R.id.radio_gender);
         Phone_number = findViewById(R.id.s_phone);
         Mail = findViewById(R.id.s_mail);
         Password = findViewById(R.id.s_pwd);
-        spinner = findViewById(R.id.spinner);
+
         Submitbtn = findViewById(R.id.s_signup);
         Loginbtn = findViewById(R.id.s_login);
-
-        Gender.setOnCheckedChangeListener(
-                new RadioGroup.OnCheckedChangeListener() {
-                    @Override
-                    public void onCheckedChanged(RadioGroup group, int checkedId) {
-                        int selectedId = Gender.getCheckedRadioButtonId();
-                        R_Gender = (RadioButton) findViewById(selectedId);
-                    }
-                }
-        );
-
-        Activity.initActivity();
-        SpinnerAdapter CustomAdapter = new SpinnerAdapter(this, R.layout.custom_spinner, Activity.getActivityList());
-        spinner.setAdapter(CustomAdapter);
-
 
 
 
@@ -67,15 +49,12 @@ public class SignupScreen extends AppCompatActivity {
                 databaseReference = firebaseDatabase.getReference("users");
 
                 String name = Name.getText().toString();
-                String age = Age.getText().toString();
-                String gender = R_Gender.getText().toString();
-                String activity = spinner.toString();
                 String phone = Phone_number.getText().toString();
                 String mail = Mail.getText().toString();
                 String password = Password.getText().toString();
 
-                HelperClass helperClass = new HelperClass(name, age, gender, activity, phone, mail,password);
-                databaseReference.child(name).setValue(helperClass);
+                User_Helper helperClass = new User_Helper(name, phone,mail,password);
+                databaseReference.child(phone).setValue(helperClass);
 
                 Toast.makeText(SignupScreen.this, "You have Sucessfully Signed up", Toast.LENGTH_LONG).show();
 
