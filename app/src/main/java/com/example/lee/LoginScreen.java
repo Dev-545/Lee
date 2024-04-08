@@ -5,12 +5,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-import androidx.activity.EdgeToEdge;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
 
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.firebase.database.DataSnapshot;
@@ -20,10 +16,9 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
 
-import java.util.Objects;
-
 public class LoginScreen extends AppCompatActivity {
-    TextInputEditText Mail, Password;
+
+    TextInputEditText Phone_number,loginPassword;
     Button SignIn, Submitbtn;
 
 
@@ -32,97 +27,91 @@ public class LoginScreen extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login_screen);
 
-        Mail = findViewById(R.id.l_mail);
-        Password = findViewById(R.id.l_passwd);
-        SignIn =   findViewById(R.id.l_signin);
+        Phone_number = findViewById(R.id.l_mobile);
+        loginPassword = findViewById(R.id.l_passwd);
         Submitbtn = findViewById(R.id.btn_submit);
-
-
-
+        SignIn = findViewById(R.id.l_signin);
         Submitbtn.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
-                if(!validatemail() | validatepwd()){
+            public void onClick(View view) {
+                if (!validateUsermobile() | !validatePassword()) {
 
-                }
-                else {
-                    checkuser();
+                } else {
+                    checkUser();
                 }
             }
         });
 
         SignIn.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
+            public void onClick(View view) {
                 Intent intent = new Intent(LoginScreen.this, SignupScreen.class);
                 startActivity(intent);
-                finish();
             }
         });
 
     }
-    public Boolean validatemail(){
-        String val =Mail.getText().toString();
-        if(val.isEmpty()){
-            Mail.setError("UserName Cannot be Empty");
+
+    public Boolean validateUsermobile() {
+        String val = Phone_number.getText().toString();
+        if (val.isEmpty()) {
+            Phone_number.setError("Phone_number cannot be empty");
             return false;
-        }
-        else {
-            Mail.setError(null);
+        } else {
+            Phone_number.setError(null);
             return true;
-
         }
-
     }
-    public Boolean validatepwd(){
-        String val =Password.getText().toString();
-        if(val.isEmpty()){
-            Password.setError("Password Cannot be Empty");
-            return false;
-        }
-        else if((val.length())<8){
-            Password.setError("Password Must be 8 Characters");
-            return false;
 
-        }
-        else {
-            Password.setError(null);
+    public Boolean validatePassword(){
+        String val = loginPassword.getText().toString();
+        if (val.isEmpty()) {
+            loginPassword.setError("Password cannot be empty");
+            return false;
+        } else {
+            loginPassword.setError(null);
             return true;
-
         }
-
     }
-    public void checkuser(){
-        String mailid = Mail.getText().toString().trim();
-        String passwd = Password.getText().toString().trim();
 
-        DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference("users");
-        Query query = databaseReference.orderByChild("mail").equalTo(mailid);
 
-        query.addListenerForSingleValueEvent(new ValueEventListener() {
+    public void checkUser(){
+        String userUsermobile = Phone_number.getText().toString().trim();
+        String userPassword = loginPassword.getText().toString().trim();
+
+        DatabaseReference reference = FirebaseDatabase.getInstance().getReference("users");
+        Query checkUserDatabase = reference.orderByChild("mobile").equalTo(userUsermobile);
+
+        checkUserDatabase.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
+
                 if (snapshot.exists()){
-                    Mail.setError(null);
-                    String pwdDB =snapshot.child(mailid).child(String.valueOf(Password)).getValue(String.class);
 
-                    if(Objects.equals(pwdDB, passwd)){
-                        Mail.setError(null);
-                        Intent intent = new Intent(LoginScreen.this, MainActivity.class);
+                    Phone_number.setError(null);
+                    String passwordFromDB = snapshot.child(userUsermobile).child("password").getValue(String.class);
+
+                    if (passwordFromDB.equals(userPassword)) {
+                        Phone_number.setError(null);
+
+                        String nameFromDB = snapshot.child(userUsermobile).child("name").getValue(String.class);
+                        String mailFromDB = snapshot.child(userUsermobile).child("email").getValue(String.class);
+                        String mobileFromDB = snapshot.child(userUsermobile).child("mobile").getValue(String.class);
+                        Intent intent = new Intent(LoginScreen.this, Profile.class);
+                        intent.putExtra("name", nameFromDB);
+                        intent.putExtra("mail", mailFromDB);
+                        intent.putExtra("mobile", mobileFromDB);
+                        intent.putExtra("password", passwordFromDB);
+
                         startActivity(intent);
-                        finish();
+                    } else {
+                        loginPassword.setError("Invalid Credentials");
+                        loginPassword.requestFocus();
                     }
-                    else{
-                        Password.setError("Invalid Password");
-                        Password.requestFocus();
-
-                    }
+                } else {
+                    Phone_number.setError("User does not exist");
+                    Phone_number.requestFocus();
                 }
-                else{
-                    Mail.setError("User Not Found");
-                    Mail.requestFocus();
-                }
-
             }
 
             @Override
@@ -130,10 +119,5 @@ public class LoginScreen extends AppCompatActivity {
 
             }
         });
-
-
-
-
-
     }
 }
