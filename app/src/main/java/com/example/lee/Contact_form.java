@@ -11,6 +11,7 @@ import android.widget.Toast;
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
+import com.google.firebase.database.DataSnapshot;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
@@ -22,8 +23,8 @@ public class Contact_form extends AppCompatActivity {
     RadioGroup Gender;
     RadioButton R_Gender;
     TextInputEditText Name, Age, Activity, Phone, Mail;
-//    FirebaseDatabase firebaseDatabase;
-//    DatabaseReference databaseReference;
+    FirebaseDatabase firebaseDatabase;
+    DatabaseReference databaseReference;
     Button Submitbtn;
 
     @Override
@@ -50,6 +51,11 @@ public class Contact_form extends AppCompatActivity {
         );
         Phone = findViewById(R.id.c_phone);
         Mail = findViewById(R.id.c_mail);
+
+//        DataSnapshot snapshot;
+//        String nameFromDB = snapshot.child("name").getValue(String.class);
+//        String mailFromDB = snapshot.child(userUsermobile).child("email").getValue(String.class);
+//        String mobileFromDB = snapshot.child(userUsermobile).child("mobile").getValue(String.class);
         Submitbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

@@ -97,7 +97,7 @@ public class LoginScreen extends AppCompatActivity {
                         String nameFromDB = snapshot.child(userUsermobile).child("name").getValue(String.class);
                         String mailFromDB = snapshot.child(userUsermobile).child("email").getValue(String.class);
                         String mobileFromDB = snapshot.child(userUsermobile).child("mobile").getValue(String.class);
-                        Intent intent = new Intent(LoginScreen.this, Profile.class);
+                        Intent intent = new Intent(LoginScreen.this, MainActivity.class);
                         intent.putExtra("name", nameFromDB);
                         intent.putExtra("mail", mailFromDB);
                         intent.putExtra("mobile", mobileFromDB);
