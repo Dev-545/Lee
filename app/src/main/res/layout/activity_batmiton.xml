@@ -72,11 +72,11 @@
                                 android:layout_gravity="center"
                                 android:layout_width="250dp"
                                 android:layout_height="250dp"
-                                android:src="@drawable/coach_vinoth"/>
+                                android:src="@drawable/coach_jala"/>
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="D. Vinoth"
+                                android:text="Jalapathi"
                                 android:textStyle="bold"
                                 android:textSize="45dp"/>
                             <TextView
@@ -103,11 +103,11 @@
                                 android:layout_gravity="center"
                                 android:layout_width="250dp"
                                 android:layout_height="250dp"
-                                android:src="@drawable/coach_bk"/>
+                                android:src="@drawable/coach_mok"/>
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Balaji Kumar"
+                                android:text="MOkshin"
                                 android:textStyle="bold"
                                 android:textSize="45dp"/>
                             <TextView

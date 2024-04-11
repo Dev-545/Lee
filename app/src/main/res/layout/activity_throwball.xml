@@ -71,11 +71,11 @@
                                 android:layout_gravity="center"
                                 android:layout_width="250dp"
                                 android:layout_height="250dp"
-                                android:src="@drawable/coach_vicky"/>
+                                android:src="@drawable/coach_pasu"/>
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="G. Vignesh"
+                                android:text="Pasupathi"
                                 android:textStyle="bold"
                                 android:textSize="45dp"/>
                             <TextView
@@ -102,11 +102,11 @@
                                 android:layout_gravity="center"
                                 android:layout_width="250dp"
                                 android:layout_height="250dp"
-                                android:src="@drawable/coach_ram"/>
+                                android:src="@drawable/coach_muruga"/>
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Kishore Ram"
+                                android:text="Murugan"
                                 android:textStyle="bold"
                                 android:textSize="45dp"/>
                             <TextView
