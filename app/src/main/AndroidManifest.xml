@@ -19,6 +19,15 @@
             android:name=".Volleyball"
             android:exported="false" />
         <activity
+            android:name=".Cricket"
+            android:exported="false" />
+        <activity
+            android:name=".Soccer"
+            android:exported="false" />
+        <activity
+            android:name=".Contactform"
+            android:exported="false" />
+        <activity
             android:name=".Throwball"
             android:exported="false" />
         <activity

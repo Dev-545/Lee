@@ -22,7 +22,7 @@ public class Batmiton extends AppCompatActivity {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Batmiton.this, Contact_form.class);
+                Intent intent = new Intent(Batmiton.this, Contactform.class);
                 intent.putExtra("activity_name", Activity);
                 startActivity(intent);
             }

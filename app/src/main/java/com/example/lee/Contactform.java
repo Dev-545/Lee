@@ -14,7 +14,7 @@ import com.google.android.material.textfield.TextInputEditText;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
-public class Contact_form extends AppCompatActivity {
+public class Contactform extends AppCompatActivity {
     RadioGroup Gender;
     RadioButton R_Gender;
     TextInputEditText Name, Age, Mobile, Mail, Address, Activity;
@@ -78,9 +78,9 @@ public class Contact_form extends AppCompatActivity {
                 Activity_Helper contact = new Activity_Helper (name, age, mobile, mail, address, activity,gender);
                 databaseReference.push().setValue(contact);
 
-                Toast.makeText(Contact_form.this, "Data Saved Successfully", Toast.LENGTH_SHORT).show();
+                Toast.makeText(Contactform.this, "Data Saved Successfully", Toast.LENGTH_SHORT).show();
 
-                Intent intent = new Intent(Contact_form.this, MainActivity.class);
+                Intent intent = new Intent(Contactform.this, MainActivity.class);
                 startActivity(intent);
                 finish();
             }
