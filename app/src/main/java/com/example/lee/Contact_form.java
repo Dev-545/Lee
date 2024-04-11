@@ -8,12 +8,7 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Toast;
 
-import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import com.google.firebase.database.DataSnapshot;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
 
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.firebase.database.DatabaseReference;
@@ -22,24 +17,25 @@ import com.google.firebase.database.FirebaseDatabase;
 public class Contact_form extends AppCompatActivity {
     RadioGroup Gender;
     RadioButton R_Gender;
-    TextInputEditText Name, Age, Activity, Phone, Mail;
+    TextInputEditText Name, Age, Mobile, Mail, Address, Activity;
+    Button Submitbtn;
     FirebaseDatabase firebaseDatabase;
     DatabaseReference databaseReference;
-    Button Submitbtn;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        EdgeToEdge.enable(this);
         setContentView(R.layout.activity_contact_form);
 
-        //        firebaseDatabase = FirebaseDatabase.getInstance();
-        //        databaseReference = firebaseDatabase.getReference("users");
-
-        Name = findViewById(R.id.c_name);
+        Name = findViewById(R.id.l_name);
         Age = findViewById(R.id.c_age);
         Gender = findViewById(R.id.radio_gender);
-        Submitbtn = findViewById(R.id.c_submit);
+        Mobile = findViewById(R.id.l_mobile);
+        Mail = findViewById(R.id.l_mail);
+        Address = findViewById(R.id.c_address);
+        Activity = findViewById(R.id.c_activity);
+        Gender = findViewById(R.id.radio_gender);
         Gender.setOnCheckedChangeListener(
                 new RadioGroup.OnCheckedChangeListener() {
                     @Override
@@ -49,43 +45,45 @@ public class Contact_form extends AppCompatActivity {
                     }
                 }
         );
-        Phone = findViewById(R.id.c_phone);
-        Mail = findViewById(R.id.c_mail);
 
-//        DataSnapshot snapshot;
-//        String nameFromDB = snapshot.child("name").getValue(String.class);
-//        String mailFromDB = snapshot.child(userUsermobile).child("email").getValue(String.class);
-//        String mobileFromDB = snapshot.child(userUsermobile).child("mobile").getValue(String.class);
+        Submitbtn = findViewById(R.id.c_submit);
+
+        Intent intent = getIntent();
+        String name = intent.getStringExtra("name");
+        String mobile = intent.getStringExtra("mobile");
+        String email = intent.getStringExtra("email");
+        String activity = intent.getStringExtra("activity_name");
+
+        Name.setText(name);
+        Mobile.setText(mobile);
+        Mail.setText(email);
+        Activity.setText(activity);
+
+
+
         Submitbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//                String name = Name.getText().toString();
-//                String age = Age.getText().toString();
-//                String gender = R_Gender.getText().toString();
-//                String phone = Phone.getText().toString();
-//                String mail = Mail.getText().toString();
-//
-//                Activity_Helper helperClass = new Activity_Helper(name,age, gender,phone,mail);
-//                databaseReference.child(name).setValue(helperClass);
+                firebaseDatabase = FirebaseDatabase.getInstance();
+                databaseReference = firebaseDatabase.getReference("contacts");
 
-                Toast.makeText(getApplicationContext(),
-                        "Data Saved Sucessfully",
-                        Toast.LENGTH_LONG).show();
+                String name = Name.getText().toString().trim();
+                String age = Age.getText().toString().trim();
+                String mobile = Mobile.getText().toString().trim();
+                String mail = Mail.getText().toString().trim();
+                String address = Address.getText().toString().trim();
+                String activity = Activity.getText().toString().trim();
+                String gender = ((RadioButton) findViewById(Gender.getCheckedRadioButtonId())).getText().toString();
+
+                Activity_Helper contact = new Activity_Helper (name, age, mobile, mail, address, activity,gender);
+                databaseReference.push().setValue(contact);
+
+                Toast.makeText(Contact_form.this, "Data Saved Successfully", Toast.LENGTH_SHORT).show();
+
                 Intent intent = new Intent(Contact_form.this, MainActivity.class);
                 startActivity(intent);
                 finish();
             }
         });
-
-
-
-        Activity = findViewById(R.id.c_activity);
-        Intent intent = getIntent();
-        String str = intent.getStringExtra("activity_name");
-        Activity.setText(str);
-
-
-
-
     }
 }

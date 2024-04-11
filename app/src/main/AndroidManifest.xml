@@ -16,6 +16,18 @@
         android:theme="@style/Theme.Lee"
         tools:targetApi="31">
         <activity
+            android:name=".Volleyball"
+            android:exported="false" />
+        <activity
+            android:name=".Throwball"
+            android:exported="false" />
+        <activity
+            android:name=".Batmiton"
+            android:exported="false" />
+        <activity
+            android:name=".Hockey"
+            android:exported="false" />
+        <activity
             android:name=".Edit"
             android:exported="false" />
         <activity
