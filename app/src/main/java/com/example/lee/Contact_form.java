@@ -9,6 +9,7 @@ import android.widget.RadioGroup;
 import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import com.google.firebase.database.DataSnapshot;
@@ -16,15 +17,19 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 import com.google.android.material.textfield.TextInputEditText;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 public class Contact_form extends AppCompatActivity {
+
     RadioGroup Gender;
     RadioButton R_Gender;
     TextInputEditText Name, Age, Activity, Phone, Mail;
-    FirebaseDatabase firebaseDatabase;
+
     DatabaseReference databaseReference;
+
     Button Submitbtn;
 
     @Override
@@ -32,9 +37,6 @@ public class Contact_form extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_contact_form);
-
-        //        firebaseDatabase = FirebaseDatabase.getInstance();
-        //        databaseReference = firebaseDatabase.getReference("users");
 
         Name = findViewById(R.id.c_name);
         Age = findViewById(R.id.c_age);
@@ -46,27 +48,38 @@ public class Contact_form extends AppCompatActivity {
                     public void onCheckedChanged(RadioGroup group, int checkedId) {
                         int selectedId = Gender.getCheckedRadioButtonId();
                         R_Gender = (RadioButton) findViewById(selectedId);
+
                     }
                 }
         );
         Phone = findViewById(R.id.c_phone);
         Mail = findViewById(R.id.c_mail);
 
-//        DataSnapshot snapshot;
-//        String nameFromDB = snapshot.child("name").getValue(String.class);
-//        String mailFromDB = snapshot.child(userUsermobile).child("email").getValue(String.class);
-//        String mobileFromDB = snapshot.child(userUsermobile).child("mobile").getValue(String.class);
+
+        Activity = findViewById(R.id.c_activity);
+        Intent intent = getIntent();
+        String str = intent.getStringExtra("activity_name");
+        String nameUser = intent.getStringExtra("name");
+        String emailUser = intent.getStringExtra("mail");
+        String mobileUser = intent.getStringExtra("mobile");
+
+        Name.setText(nameUser);
+        Mail.setText(emailUser);
+        Phone.setText(mobileUser);
+        Activity.setText(str);
+        String name= Name.getText().toString();
+        String mail= Mail.getText().toString();
+        String age= Age.getText().toString();
+        String phone= Phone.getText().toString();
+        String gender= Gender.toString();
+        String activity= Activity.getText().toString();
+
         Submitbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//                String name = Name.getText().toString();
-//                String age = Age.getText().toString();
-//                String gender = R_Gender.getText().toString();
-//                String phone = Phone.getText().toString();
-//                String mail = Mail.getText().toString();
-//
-//                Activity_Helper helperClass = new Activity_Helper(name,age, gender,phone,mail);
-//                databaseReference.child(name).setValue(helperClass);
+                databaseReference= FirebaseDatabase.getInstance().getReference("Activity");
+                Activity_Helper helperClass = new Activity_Helper(name,age,gender,activity,mail,phone);
+                databaseReference.child(phone).setValue(helperClass);
 
                 Toast.makeText(getApplicationContext(),
                         "Data Saved Sucessfully",
@@ -79,10 +92,6 @@ public class Contact_form extends AppCompatActivity {
 
 
 
-        Activity = findViewById(R.id.c_activity);
-        Intent intent = getIntent();
-        String str = intent.getStringExtra("activity_name");
-        Activity.setText(str);
 
 
 

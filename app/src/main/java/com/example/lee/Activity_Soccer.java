@@ -19,6 +19,9 @@ public class Activity_Soccer extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_soccer);
+        getSupportActionBar().setTitle("Soccer");
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
         button =findViewById(R.id.a_apply);
         String Activity = "Soccer";
         button.setOnClickListener(new View.OnClickListener() {
