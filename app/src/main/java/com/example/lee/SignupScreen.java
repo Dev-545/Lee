@@ -34,6 +34,7 @@ public class SignupScreen extends AppCompatActivity {
         Password = findViewById(R.id.l_passwd);
         Loginbtn = findViewById(R.id.l_login);
         Submitbtn = findViewById(R.id.btn_submit);
+
         Submitbtn.setOnClickListener(view -> {
             database = FirebaseDatabase.getInstance();
             reference = database.getReference("users");
@@ -47,6 +48,7 @@ public class SignupScreen extends AppCompatActivity {
             Intent intent = new Intent(SignupScreen.this, LoginScreen.class);
             startActivity(intent);
         });
+
         Loginbtn.setOnClickListener(view -> {
             Intent intent = new Intent(SignupScreen.this, LoginScreen.class);
             startActivity(intent);

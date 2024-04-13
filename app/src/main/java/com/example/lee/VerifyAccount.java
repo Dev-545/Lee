@@ -9,7 +9,9 @@ import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
@@ -25,6 +27,8 @@ public class VerifyAccount extends AppCompatActivity {
 
     Button verifyBtn;
     EditText phone;
+
+    private Toolbar toolbar;
     FirebaseDatabase firebaseDatabase;
     DatabaseReference databaseReference;
 
@@ -32,6 +36,13 @@ public class VerifyAccount extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
+
+        toolbar = findViewById(R.id.appbar);
+        setSupportActionBar(toolbar);
+
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.setDisplayHomeAsUpEnabled(true);
+        actionBar.setTitle("Mobile");
 
         setContentView(R.layout.activity_verify_account);
         verifyBtn = findViewById(R.id.verify);

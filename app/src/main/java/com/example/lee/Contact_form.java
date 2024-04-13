@@ -26,7 +26,7 @@ public class Contact_form extends AppCompatActivity {
 
     RadioGroup Gender;
     RadioButton R_Gender;
-    TextInputEditText Name, Age, Activity, Phone, Mail;
+    TextInputEditText Name, Age, Activity, Phone, Mail,Address;
 
     DatabaseReference databaseReference;
 
@@ -40,23 +40,23 @@ public class Contact_form extends AppCompatActivity {
 
         Name = findViewById(R.id.c_name);
         Age = findViewById(R.id.c_age);
+        Address =findViewById(R.id.c_address);
         Gender = findViewById(R.id.radio_gender);
-        Submitbtn = findViewById(R.id.c_submit);
         Gender.setOnCheckedChangeListener(
                 new RadioGroup.OnCheckedChangeListener() {
                     @Override
                     public void onCheckedChanged(RadioGroup group, int checkedId) {
                         int selectedId = Gender.getCheckedRadioButtonId();
                         R_Gender = (RadioButton) findViewById(selectedId);
-
                     }
                 }
         );
         Phone = findViewById(R.id.c_phone);
         Mail = findViewById(R.id.c_mail);
-
-
         Activity = findViewById(R.id.c_activity);
+
+        Submitbtn = findViewById(R.id.c_submit);
+
         Intent intent = getIntent();
         String str = intent.getStringExtra("activity_name");
         String nameUser = intent.getStringExtra("name");
@@ -69,17 +69,19 @@ public class Contact_form extends AppCompatActivity {
         Activity.setText(str);
         String name= Name.getText().toString();
         String mail= Mail.getText().toString();
-        String age= Age.getText().toString();
         String phone= Phone.getText().toString();
-        String gender= Gender.toString();
         String activity= Activity.getText().toString();
+
 
         Submitbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 databaseReference= FirebaseDatabase.getInstance().getReference("Activity");
-                Activity_Helper helperClass = new Activity_Helper(name,age,gender,activity,mail,phone);
-                databaseReference.child(phone).setValue(helperClass);
+                String age= Age.getText().toString();
+                String gender = ((RadioButton) findViewById(Gender.getCheckedRadioButtonId())).getText().toString();
+                String address = Address.getText().toString();
+                Activity_Helper helperClass = new Activity_Helper(name,age,gender,activity,mail,phone,address);
+                databaseReference.child(activity).setValue(helperClass);
 
                 Toast.makeText(getApplicationContext(),
                         "Data Saved Sucessfully",
