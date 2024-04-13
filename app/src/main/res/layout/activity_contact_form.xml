@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Contactform"
+    tools:context=".Contact_form"
     android:padding="20dp"
     android:gravity="center"
     android:background="@drawable/background3"
@@ -42,7 +42,7 @@
                 android:layout_height="wrap_content">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/l_name"
+                    android:id="@+id/c_name"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:drawableLeft="@drawable/baseline_person_24"
@@ -61,6 +61,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:drawableLeft="@drawable/baseline_age_pin_24"
+                    android:inputType="number"
                     android:drawablePadding="8dp"
                     android:hint="@string/age" />
             </com.google.android.material.textfield.TextInputLayout>
@@ -114,7 +115,7 @@
                 android:layout_height="wrap_content">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/l_mail"
+                    android:id="@+id/c_mail"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:drawableLeft="@drawable/baseline_email_24"
@@ -133,7 +134,7 @@
                 app:counterTextColor="@color/Red">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/l_mobile"
+                    android:id="@+id/c_phone"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:drawableLeft="@drawable/baseline_phone_iphone_24"
@@ -143,19 +144,6 @@
                     android:maxLength="10" />
             </com.google.android.material.textfield.TextInputLayout>
 
-
-            <com.google.android.material.textfield.TextInputLayout
-                android:layout_width="match_parent"
-                android:layout_height="70dp">
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/c_address"
-                    android:layout_width="match_parent"
-                    android:layout_height="63dp"
-                    android:drawableLeft="@drawable/baseline_location_on_24"
-                    android:drawablePadding="8dp"
-                    android:hint="@string/address" />
-            </com.google.android.material.textfield.TextInputLayout>
 
 
             <Button

@@ -5,14 +5,17 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="horizontal"
-    android:padding="15dp"
-    tools:context=".Cricket">
+    android:orientation="vertical"
+
+    tools:context=".Activity_Cricket">
+    <include
+        layout="@layout/appbar"/>
 
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:padding="15dp">
     <LinearLayout
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
@@ -22,8 +25,7 @@
     android:orientation="vertical"
 
 >
-        <include
-            layout="@layout/appbar"/>
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

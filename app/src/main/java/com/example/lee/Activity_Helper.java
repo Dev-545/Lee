@@ -56,7 +56,7 @@ public class Activity_Helper {
 
     public Activity_Helper(String name, String age,String gender, String activity,String phone, String mail ) {
         this.Name = name;
-        this.Age=age;
+        this.Age= age;
         this.Gender= gender;
         this.Activity= activity;
         this.Phone =phone;

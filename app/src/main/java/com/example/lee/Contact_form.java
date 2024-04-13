@@ -79,7 +79,7 @@ public class Contact_form extends AppCompatActivity {
             public void onClick(View v) {
                 databaseReference= FirebaseDatabase.getInstance().getReference("Activity");
                 Activity_Helper helperClass = new Activity_Helper(name,age,gender,activity,mail,phone);
-                databaseReference.child(phone).setValue(helperClass);
+                databaseReference.child(activity).setValue(helperClass);
 
                 Toast.makeText(getApplicationContext(),
                         "Data Saved Sucessfully",

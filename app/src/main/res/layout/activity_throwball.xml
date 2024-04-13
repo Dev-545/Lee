@@ -5,12 +5,14 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="horizontal"
-    android:padding="15dp"
-    tools:context=".Throwball">
+    android:orientation="vertical"
+    tools:context=".Activity_Throwball">
+    <include
+        layout="@layout/appbar"/>
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:padding="15dp">
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

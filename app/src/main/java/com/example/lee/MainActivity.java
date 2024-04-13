@@ -57,7 +57,7 @@ public class MainActivity extends AppCompatActivity {
         Cricket.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, Cricket.class);
+                Intent intent = new Intent(MainActivity.this, Activity_Cricket.class);
                 startActivity(intent);
                 finish();
             }
@@ -66,7 +66,7 @@ public class MainActivity extends AppCompatActivity {
         Soccer.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, Soccer.class);
+                Intent intent = new Intent(MainActivity.this, Activity_Soccer.class);
                 startActivity(intent);
                 finish();
             }
@@ -75,7 +75,7 @@ public class MainActivity extends AppCompatActivity {
         Hockey.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, Hockey.class);
+                Intent intent = new Intent(MainActivity.this, Activity_Hockey.class);
                 startActivity(intent);
                 finish();
             }
@@ -84,7 +84,7 @@ public class MainActivity extends AppCompatActivity {
         Throwball.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, Throwball.class);
+                Intent intent = new Intent(MainActivity.this, Activity_Throwball.class);
                 startActivity(intent);
                 finish();
             }
@@ -93,7 +93,7 @@ public class MainActivity extends AppCompatActivity {
         Badminton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, Batmiton.class);
+                Intent intent = new Intent(MainActivity.this, Activity_Batmiton.class);
                 startActivity(intent);
                 finish();
             }
@@ -102,7 +102,7 @@ public class MainActivity extends AppCompatActivity {
         VolleyBall.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, Volleyball.class);
+                Intent intent = new Intent(MainActivity.this, Activity_Volleyball.class);
                 startActivity(intent);
                 finish();
             }
