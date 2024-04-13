@@ -57,7 +57,7 @@ public class MainActivity extends AppCompatActivity {
         Cricket.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, Activity_Cricket.class);
+                Intent intent = new Intent(MainActivity.this, Cricket.class);
                 startActivity(intent);
                 finish();
             }
@@ -66,7 +66,43 @@ public class MainActivity extends AppCompatActivity {
         Soccer.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, Activity_Soccer.class);
+                Intent intent = new Intent(MainActivity.this, Soccer.class);
+                startActivity(intent);
+                finish();
+            }
+        });
+
+        Hockey.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, Hockey.class);
+                startActivity(intent);
+                finish();
+            }
+        });
+
+        Throwball.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, Throwball.class);
+                startActivity(intent);
+                finish();
+            }
+        });
+
+        Badminton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, Batmiton.class);
+                startActivity(intent);
+                finish();
+            }
+        });
+
+        VolleyBall.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, Volleyball.class);
                 startActivity(intent);
                 finish();
             }

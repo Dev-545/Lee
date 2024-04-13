@@ -7,7 +7,8 @@
     android:layout_height="match_parent"
     android:orientation="horizontal"
     android:padding="15dp"
-    tools:context=".Soccer">
+    tools:context=".Hockey">
+
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -23,7 +24,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/Sp_soccer"
+                android:text="@string/Sp_hockey"
                 android:textStyle="bold"
                 android:textColor="@color/Dark_blue"
                 android:layout_margin="5dp"
@@ -31,19 +32,19 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/soc_desc"
+                android:text="@string/hock_desc"
                 android:justificationMode="inter_word"
                 android:layout_margin="5dp"
                 android:textColor="@color/Dark_blue"
-                android:textSize="15dp"/>
+                android:textSize="15sp"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Coach Details"
+                android:text="@string/coach_details"
                 android:layout_margin="5dp"
                 android:textColor="@color/Dark_blue"
                 android:textStyle="bold"
-                android:textSize="35dp"/>
+                android:textSize="35sp"/>
 
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
@@ -57,7 +58,7 @@
 
                     >
                     <LinearLayout
-                        android:layout_width="match_parent"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:orientation="horizontal"
                         android:padding="20dp">
@@ -71,19 +72,19 @@
                                 android:layout_gravity="center"
                                 android:layout_width="250dp"
                                 android:layout_height="250dp"
-                                android:src="@drawable/coach_vicky"/>
+                                android:src="@drawable/coach_jai"/>
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="G. Vignesh"
+                                android:text="Mukesh"
                                 android:textStyle="bold"
                                 android:textSize="45dp"/>
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Coach"
+                                android:text="@string/coach"
                                 android:textStyle="italic"
-                                android:textSize="15dp"/>
+                                android:textSize="15sp"/>
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
@@ -102,17 +103,17 @@
                                 android:layout_gravity="center"
                                 android:layout_width="250dp"
                                 android:layout_height="250dp"
-                                android:src="@drawable/coach_ram"/>
+                                android:src="@drawable/coach_jag"/>
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Kishore Ram"
+                                android:text="Jagadesh"
                                 android:textStyle="bold"
                                 android:textSize="45dp"/>
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Coach"
+                                android:text="@string/coach"
                                 android:textStyle="italic"
                                 android:textSize="15dp"/>
                             <TextView
@@ -143,17 +144,17 @@
                     <ImageView
                         android:layout_width="250dp"
                         android:layout_height="200dp"
-                        android:src="@drawable/cric1"
+                        android:src="@drawable/hock1"
                         android:layout_marginRight="25dp"/>
                     <ImageView
                         android:layout_width="250dp"
                         android:layout_height="200dp"
-                        android:src="@drawable/cric2"
+                        android:src="@drawable/hoc2"
                         android:layout_marginRight="25dp"/>
                     <ImageView
                         android:layout_width="250dp"
                         android:layout_height="200dp"
-                        android:src="@drawable/cric3"/>
+                        android:src="@drawable/hoc3"/>
                 </LinearLayout>
             </HorizontalScrollView>
 
@@ -169,7 +170,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/soc_tym"
+                android:text="@string/hock_tym"
                 android:textColor="@color/Dark_blue"
                 android:textSize="15dp"/>
             <Button
@@ -179,5 +180,4 @@
                 android:text="@string/nav_contact"/>
         </LinearLayout>
     </ScrollView>
-
 </LinearLayout>

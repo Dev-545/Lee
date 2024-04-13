@@ -7,6 +7,7 @@
     <string name="btn">Submit</string>
     <string name="age">Enter Your Age</string>
     <string name="activity">Enter the Activity</string>
+    <string name="address">Enter Your Address</string>
     <string name="name">Enter Your Name</string>
     <string name="ph_no">Enter Your Phone Number</string>
     <string name="mail">Enter Your MailID</string>
@@ -41,13 +42,21 @@
     <string name="hm_explore">Explore</string>
     <string name="cric_desc">Cricket embodies the triumph of spirit and skill. It\'s a sport that unites, inspires discipline, and celebrates teamwork. Every match is a testament to dedication, where players and fans alike share a fervent passion for every run scored and wicket taken, igniting aspirations worldwide.</string>
     <string name="coach1">Vinoth</string>
+    <string name="hock_desc">Hockey helps Develop leadership skills, discipline and teamwork in the players. Being a team player is essential in any sport and hockey is no exception. The sport requires teamwork to succeed, which helps develop leadership and discipline.</string>
     <string name="nav_contact">Apply Now</string>
     <string name="soc_desc">Football(Soccer) is a celebration of unity and talent. It\'s where strategy meets stamina, and every goal is a burst of joy. It teaches resilience, teamwork, and the pursuit of excellence, captivating hearts globally.a tapestry of cultures woven together by a shared passion. Each match is a dance of coordination and athleticism, inspiring dreams and celebrating collective effort</string>
-    <string name="cric_tym">05.00am -10.00 \n 04.00-09.00</string>
-    <string name="soc_tym">07.00-12.00\n03.00 -06.00</string>
+    <string name="bat_desc">Badminton is a fun, active sport which is an easy game to practice with few painless rules. It boosts up your muscles, adds strength to the muscles, improves blood flow rate and the benefits are endless.</string>
+    <string name="vol_desc">Volleyball is a fast-paced sport, and you have plenty of opportunities to improve your forearm/eye and hand/eye coordination. You Get to Play Offense and Defense. While volleyball does have set positions, every player on the court has to be good at several things.</string>
+    <string name="throw_desc">The physical constant movement in throwball builds the muscles of lower as well as upper body. The constant use of arms and legs makes it a full body workout. Working in a team together improves mental health, reduces stress and improves self confidence.</string>
+    <string name="cric_tym">05.00am -10.00am \n 04.00pm-09.00pm</string>
+    <string name="bat_tym">05.00am -10.00am \n 04.00pm-09.00pm</string>
+    <string name="vol_tym">07.00am-12.00pm\n 03.00pm -06.00pm</string>
+    <string name="throw_tym">06.00am -09.00am \n 05.00pm-10.00pm</string>
+    <string name="soc_tym">07.00am-12.00pm\n 03.00pm -06.00pm</string>
+    <string name="hock_tym">06.00am -09.00am \n 05.00pm-10.00pm</string>
     <string name="coach">Coach</string>
     <string name="coach_details">Coach Details</string>
-    <string name="contact">Contact form</string>
+    <string name="contact">Contact Form</string>
 
 
 </resources>

@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:orientation="horizontal"
     android:padding="15dp"
-    tools:context=".Soccer">
+    tools:context=".Throwball">
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -23,7 +23,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/Sp_soccer"
+                android:text="@string/Sp_throwball"
                 android:textStyle="bold"
                 android:textColor="@color/Dark_blue"
                 android:layout_margin="5dp"
@@ -31,7 +31,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/soc_desc"
+                android:text="@string/throw_desc"
                 android:justificationMode="inter_word"
                 android:layout_margin="5dp"
                 android:textColor="@color/Dark_blue"
@@ -71,11 +71,11 @@
                                 android:layout_gravity="center"
                                 android:layout_width="250dp"
                                 android:layout_height="250dp"
-                                android:src="@drawable/coach_vicky"/>
+                                android:src="@drawable/coach_pasu"/>
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="G. Vignesh"
+                                android:text="Pasupathi"
                                 android:textStyle="bold"
                                 android:textSize="45dp"/>
                             <TextView
@@ -102,11 +102,11 @@
                                 android:layout_gravity="center"
                                 android:layout_width="250dp"
                                 android:layout_height="250dp"
-                                android:src="@drawable/coach_ram"/>
+                                android:src="@drawable/coach_muruga"/>
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Kishore Ram"
+                                android:text="Murugan"
                                 android:textStyle="bold"
                                 android:textSize="45dp"/>
                             <TextView
@@ -143,17 +143,17 @@
                     <ImageView
                         android:layout_width="250dp"
                         android:layout_height="200dp"
-                        android:src="@drawable/cric1"
+                        android:src="@drawable/throw1"
                         android:layout_marginRight="25dp"/>
                     <ImageView
                         android:layout_width="250dp"
                         android:layout_height="200dp"
-                        android:src="@drawable/cric2"
+                        android:src="@drawable/throw4"
                         android:layout_marginRight="25dp"/>
                     <ImageView
                         android:layout_width="250dp"
                         android:layout_height="200dp"
-                        android:src="@drawable/cric3"/>
+                        android:src="@drawable/throw3"/>
                 </LinearLayout>
             </HorizontalScrollView>
 
@@ -169,7 +169,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/soc_tym"
+                android:text="@string/throw_tym"
                 android:textColor="@color/Dark_blue"
                 android:textSize="15dp"/>
             <Button
