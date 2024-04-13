@@ -1,5 +1,6 @@
 package com.example.lee;
 
+import android.app.Dialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
@@ -52,8 +53,6 @@ public class MainActivity extends AppCompatActivity {
 
         cardView.setPreventCornerOverlap(false);
 
-        new PopUpClass();
-
 
         Cricket.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -94,6 +93,13 @@ public class MainActivity extends AppCompatActivity {
                 Toast.makeText(getApplicationContext(), "Logout Sucessfully", Toast.LENGTH_LONG).show();
                 break;
             case R.id.updation:
+                item.setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
+                    @Override
+                    public boolean onMenuItemClick(@NonNull MenuItem item) {
+                        showDialog();
+                        return true;
+                    }
+                });
                 Toast.makeText(getApplicationContext(), "Whats New", Toast.LENGTH_LONG).show();
                 break;
             case R.id.about:
@@ -101,6 +107,12 @@ public class MainActivity extends AppCompatActivity {
                 break;
         }
         return super.onOptionsItemSelected(item);
+    }
+
+    private void showDialog() {
+        Dialog dialog = new Dialog(this);
+        dialog.setContentView(R.layout.popupscreen);
+        dialog.show();
     }
 
     private void profile() {
