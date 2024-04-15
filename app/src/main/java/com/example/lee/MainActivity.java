@@ -66,7 +66,7 @@ public class MainActivity extends AppCompatActivity {
         Soccer.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this,Activity_Soccer.class);
+                Intent intent = new Intent(MainActivity.this, Activity_Soccer.class);
                 startActivity(intent);
                 finish();
             }
@@ -133,14 +133,14 @@ public class MainActivity extends AppCompatActivity {
                     @Override
                     public boolean onMenuItemClick(@NonNull MenuItem item) {
                         showDialog();
+                        Toast.makeText(getApplicationContext(), "Whats New", Toast.LENGTH_LONG).show();
                         return true;
                     }
                 });
-                Toast.makeText(getApplicationContext(), "Whats New", Toast.LENGTH_LONG).show();
+
                 break;
             case R.id.about:
-                startActivity( new Intent(MainActivity.this,About.class));
-                Toast.makeText(getApplicationContext(), "About", Toast.LENGTH_LONG).show();
+                startActivity(new Intent(MainActivity.this, AboutScreen.class));
                 break;
         }
         return super.onOptionsItemSelected(item);
@@ -150,6 +150,13 @@ public class MainActivity extends AppCompatActivity {
         Dialog dialog = new Dialog(this);
         dialog.setContentView(R.layout.popupscreen);
         dialog.show();
+//        Button close = findViewById(R.id.close);
+//        close.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                dialog.dismiss();
+//            }
+//        });
     }
 
     private void profile() {

@@ -21,7 +21,7 @@
     <androidx.viewpager.widget.ViewPager
         android:id="@+id/slideViewPager"
         android:layout_width="match_parent"
-        android:layout_height="662dp"
+        android:layout_height="wrap_content"
         android:contentDescription="Onboarding slides" />
 
     <LinearLayout
@@ -35,10 +35,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/sp_prev_btn"
-            android:layout_gravity="end"
             android:contentDescription="Previous slide" />
-
-
 
         <LinearLayout
             android:id="@+id/idindicator"
@@ -51,11 +48,11 @@
 
         <Button
             android:id="@+id/o_next"
-            android:layout_width="wrap_content"
+            android:layout_width="90dp"
             android:layout_height="wrap_content"
             android:layout_gravity="end"
-            android:contentDescription="Next Slide"
-            android:text="@string/sp_nxt_btn" />
+            android:text="@string/sp_nxt_btn"
+            android:contentDescription="Next Slide" />
     </LinearLayout>
 
 </LinearLayout>

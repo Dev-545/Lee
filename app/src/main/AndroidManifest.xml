@@ -16,13 +16,14 @@
         android:theme="@style/Theme.Lee"
         tools:targetApi="31">
         <activity
-            android:name=".About"
-            android:exported="false"
-            android:parentActivityName=".MainActivity"/>
+            android:name=".AboutScreen"
+            android:exported="false" />
+        <activity
+            android:name=".test"
+            android:exported="false" />
         <activity
             android:name=".VerifyAccount"
-            android:exported="false"
-            android:parentActivityName=".MainActivity"/>
+            android:exported="false" />
         <activity
             android:name=".Edit"
             android:exported="false" />
@@ -35,22 +36,6 @@
             android:parentActivityName=".MainActivity" />
         <activity
             android:name=".Activity_Soccer"
-            android:exported="false"
-            android:parentActivityName=".MainActivity" />
-        <activity
-            android:name=".Activity_Hockey"
-            android:exported="false"
-            android:parentActivityName=".MainActivity" />
-        <activity
-            android:name=".Activity_Batmiton"
-            android:exported="false"
-            android:parentActivityName=".MainActivity" />
-        <activity
-            android:name=".Activity_Volleyball"
-            android:exported="false"
-            android:parentActivityName=".MainActivity" />
-        <activity
-            android:name=".Activity_Throwball"
             android:exported="false"
             android:parentActivityName=".MainActivity" />
         <activity
