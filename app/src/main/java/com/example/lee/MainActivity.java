@@ -75,7 +75,7 @@ public class MainActivity extends AppCompatActivity {
         Hockey.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, Activity_Volleyball.class);
+                Intent intent = new Intent(MainActivity.this, Activity_Hockey.class);
                 startActivity(intent);
                 finish();
             }

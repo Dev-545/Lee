@@ -25,7 +25,7 @@ public class Activity_Soccer extends AppCompatActivity {
 
         ActionBar actionBar = getSupportActionBar();
         actionBar.setDisplayHomeAsUpEnabled(true);
-        actionBar.setTitle("soccer");
+        actionBar.setTitle("Soccer");
 
         button =findViewById(R.id.a_apply);
         String Activity = "Soccer";

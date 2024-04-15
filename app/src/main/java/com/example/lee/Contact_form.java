@@ -86,7 +86,7 @@ public class Contact_form extends AppCompatActivity {
                 Toast.makeText(getApplicationContext(),
                         "Data Saved Sucessfully",
                         Toast.LENGTH_LONG).show();
-                Intent intent = new Intent(Contact_form.this, MainActivity.class);
+                Intent intent = new Intent(Contact_form.this,MainActivity .class);
                 startActivity(intent);
                 finish();
             }

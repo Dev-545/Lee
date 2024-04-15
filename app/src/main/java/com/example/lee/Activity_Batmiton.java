@@ -27,7 +27,7 @@ public class Activity_Batmiton extends AppCompatActivity {
 
         ActionBar actionBar = getSupportActionBar();
         actionBar.setDisplayHomeAsUpEnabled(true);
-        actionBar.setTitle("badminton");
+        actionBar.setTitle("Badminton");
 
         button =findViewById(R.id.a_apply);
         String Activity = "Batmiton";

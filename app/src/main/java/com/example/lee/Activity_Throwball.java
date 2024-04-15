@@ -20,6 +20,7 @@ public class Activity_Throwball extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_throwball);
+
         toolbar = findViewById(R.id.appbar);
         setSupportActionBar(toolbar);
 

@@ -36,6 +36,7 @@ public class VerifyAccount extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
+        setContentView(R.layout.activity_verify_account);
 
         toolbar = findViewById(R.id.appbar);
         setSupportActionBar(toolbar);
@@ -44,13 +45,8 @@ public class VerifyAccount extends AppCompatActivity {
         actionBar.setDisplayHomeAsUpEnabled(true);
         actionBar.setTitle("Mobile");
 
-        setContentView(R.layout.activity_verify_account);
         verifyBtn = findViewById(R.id.verify);
         phone=findViewById(R.id.vphone);
-
-
-
-
 
        verifyBtn.setOnClickListener(new View.OnClickListener() {
             @Override
