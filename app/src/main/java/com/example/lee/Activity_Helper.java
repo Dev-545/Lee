@@ -1,7 +1,7 @@
 package com.example.lee;
 
 public class Activity_Helper {
-    String  Name,Age, Gender, Activity,Phone, Mail,Address;
+    String  Name,Age, Gender, Activity,Phone, Mail;
 
     public String getAge() {
         return Age;
@@ -52,24 +52,17 @@ public class Activity_Helper {
         this.Mail = Mail;
     }
 
-    public String getAddress() {
-        return Address;
-    }
-
-    public void setAddress(String address) {
-        Address = address;
-    }
 
 
 
-    public Activity_Helper(String name, String age,String gender, String activity,String phone, String mail,String address ) {
+
+    public Activity_Helper(String name, String age,String gender, String activity,String phone, String mail ) {
         this.Name = name;
         this.Age= age;
         this.Gender= gender;
         this.Activity= activity;
         this.Phone =phone;
         this.Mail  = mail;
-        this.Address=address;
 
 
     }

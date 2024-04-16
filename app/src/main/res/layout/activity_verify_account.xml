@@ -15,13 +15,15 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        >
 
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="35dp"
+            android:layout_margin="30dp"
             app:cardCornerRadius="30dp"
+            android:layout_gravity="center"
             app:cardElevation="40dp">
         <LinearLayout
             android:layout_width="match_parent"
@@ -31,6 +33,21 @@
             android:layout_gravity="center_horizontal"
             android:padding="24dp"
             android:background="@drawable/red_boarder">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Verify Your Account.."
+                android:textStyle="bold"
+                android:textSize="34sp"/>
+            <com.airbnb.lottie.LottieAnimationView
+                android:layout_width="290dp"
+                android:layout_height="272dp"
+                android:layout_gravity="center"
+                android:layout_marginVertical="20dp"
+                android:id="@+id/slideAnimate"
+                app:lottie_autoPlay="true"
+                app:lottie_loop="true"
+                app:lottie_rawRes="@raw/verify" />
 
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"

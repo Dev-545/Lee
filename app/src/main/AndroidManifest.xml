@@ -18,12 +18,10 @@
         <activity
             android:name=".AboutScreen"
             android:exported="false" />
-        <activity
-            android:name=".test"
-            android:exported="false" />
+
         <activity
             android:name=".VerifyAccount"
-            android:exported="false" />
+            android:exported="false"/>
         <activity
             android:name=".Edit"
             android:exported="false" />
@@ -32,8 +30,7 @@
             android:exported="false" />
         <activity
             android:name=".Activity_Cricket"
-            android:exported="false"
-            android:parentActivityName=".MainActivity" />
+            android:exported="false" />
         <activity
             android:name=".Activity_Soccer"
             android:exported="false"

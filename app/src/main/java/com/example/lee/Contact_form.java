@@ -26,7 +26,7 @@ public class Contact_form extends AppCompatActivity {
 
     RadioGroup Gender;
     RadioButton R_Gender;
-    TextInputEditText Name, Age, Activity, Phone, Mail,Address;
+    TextInputEditText Name, Age, Activity, Phone, Mail;
 
     DatabaseReference databaseReference;
 
@@ -40,7 +40,6 @@ public class Contact_form extends AppCompatActivity {
 
         Name = findViewById(R.id.c_name);
         Age = findViewById(R.id.c_age);
-        Address =findViewById(R.id.c_address);
         Gender = findViewById(R.id.radio_gender);
         Gender.setOnCheckedChangeListener(
                 new RadioGroup.OnCheckedChangeListener() {
@@ -79,8 +78,7 @@ public class Contact_form extends AppCompatActivity {
                 databaseReference= FirebaseDatabase.getInstance().getReference("Activity");
                 String age= Age.getText().toString();
                 String gender = ((RadioButton) findViewById(Gender.getCheckedRadioButtonId())).getText().toString();
-                String address = Address.getText().toString();
-                Activity_Helper helperClass = new Activity_Helper(name,age,gender,activity,mail,phone,address);
+                Activity_Helper helperClass = new Activity_Helper(name,age,gender,activity,mail,phone);
                 databaseReference.child(activity).setValue(helperClass);
 
                 Toast.makeText(getApplicationContext(),

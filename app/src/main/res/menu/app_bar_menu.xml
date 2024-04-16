@@ -14,13 +14,11 @@
     <item
         android:id="@+id/updation"
         android:title="What's New"
-        app:showAsAction="never"
-        android:icon="@drawable/whatsnew"/>
+        app:showAsAction="never" />
     <item
         android:id="@+id/about"
         android:title="About"
-        app:showAsAction="never"
-        android:icon="@drawable/baseline_class_24"/>
+        app:showAsAction="never" />
 
 
 </menu>
