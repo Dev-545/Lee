@@ -13,55 +13,464 @@
         android:layout_height="wrap_content"
         android:text="Developers Details"
         android:textSize="44sp"/>
-
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
+        android:padding="10dp"
         android:background="@drawable/rose_boarder">
+<!--        Balaji Kumar-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Balaji Kumar"
-            android:textSize="24sp"/>
+            android:textStyle="bold"
+            android:textSize="44sp"
+            android:layout_marginVertical="10dp"/>
+
+        <ImageView
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:layout_gravity="center"
+            android:scaleType="fitXY"
+            android:src="@drawable/coach_bk"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:layout_marginVertical="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:drawableLeft="@drawable/baseline_email_24"
+                android:layout_marginRight="15dp"
+                android:id="@+id/navmail_bk"
+                android:text="Mail"
+                app:cornerRadius="2dp" />
+            <Button
+                android:layout_marginVertical="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:drawableLeft="@drawable/ic_action_name"
+                android:layout_marginRight="15dp"
+                android:id="@+id/navgit_bk"
+                android:text="Github"
+                app:cornerRadius="2dp" />
+            <Button
+                android:layout_marginVertical="10dp"
+                android:layout_width="wrap_content"
+                android:layout_gravity="center|end"
+                android:layout_height="50dp"
+                android:drawableLeft="@drawable/ic_action_linkedin"
+                android:text="Linkedin"
+                android:id="@+id/navlink_bk"
+
+                app:cornerRadius="2dp" />
+        </LinearLayout>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Skills"
-            android:textSize="24sp"/>
+            android:textStyle="bold"
+            android:layout_marginVertical="10dp"
+            android:textSize="34sp"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+<!--            Python-->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Python"
+                android:layout_marginRight="15dp"
+                android:textSize="24sp"/>
+
+            <ProgressBar
+                android:id="@+id/b_pythonbar"
+                style="@style/CustomProgressBar"
+                android:layout_gravity="center"
+                android:layout_width="240dp"
+                android:layout_height="10dp" />
+        </LinearLayout>
+<!--        Java-->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Python"
+                android:text="Java"
+                android:layout_marginRight="15dp"
                 android:textSize="24sp"/>
 
             <ProgressBar
-                android:id="@+id/pythonbar"
-                style="@style/Widget.AppCompat.ProgressBar.Horizontal"
-
+                android:id="@+id/b_javabar"
+                style="@style/CustomProgressBar"
+                android:layout_gravity="center"
                 android:layout_width="240dp"
                 android:layout_height="10dp" />
-
         </LinearLayout>
+<!--        Android Studio-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Android Studio"
+                android:layout_marginRight="15dp"
+                android:textSize="24sp"/>
+
+            <ProgressBar
+                android:id="@+id/b_androbar"
+                style="@style/CustomProgressBar"
+                android:layout_gravity="center"
+                android:layout_width="240dp"
+                android:layout_height="10dp" />
+        </LinearLayout>
+<!--  Flutter      -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Flutter"
+                android:layout_marginRight="15dp"
+                android:textSize="24sp"/>
+
+            <ProgressBar
+                android:id="@+id/b_flutterbar"
+                style="@style/CustomProgressBar"
+                android:layout_gravity="center"
+                android:layout_width="240dp"
+                android:layout_height="10dp" />
+        </LinearLayout>
+<!--     React   -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="React"
+                android:layout_marginRight="15dp"
+                android:textSize="24sp"/>
+
+            <ProgressBar
+                android:id="@+id/b_reactbar"
+                style="@style/CustomProgressBar"
+                android:layout_gravity="center"
+                android:layout_width="240dp"
+                android:layout_height="10dp" />
+        </LinearLayout>
+
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Projects"
-            android:textSize="24sp"/>
+            android:textStyle="bold"
+            android:layout_marginVertical="10dp"
+            android:textSize="34sp"/>
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="500dp">
             <HorizontalScrollView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="JAZZLE - E-commerce website"
+                            android:textSize="24sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Mebot Inc"
+                            android:textSize="14sp" />
+
+                        <ImageButton
+                            android:id="@+id/navproj_bk"
+                            android:layout_width="400dp"
+                            android:layout_height="400dp"
+                            android:layout_marginVertical="10dp"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/a_b_projectlogo1" />
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        >
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="IRON JUNGLE - A Fitness Portfolio Webapp"
+                            android:textStyle="bold"
+                            android:textSize="24sp"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Mebot Inc"
+                            android:textSize="14sp"/>
+                        <ImageView
+                            android:layout_width="400dp"
+                            android:layout_height="400dp"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/a_b_projectlogo2"/>
+                    </LinearLayout>
+                </LinearLayout>
 
             </HorizontalScrollView>
         </androidx.cardview.widget.CardView>
+        </LinearLayout>
+<!--        Vinoth-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Vinoth"
+                android:textStyle="bold"
+                android:textSize="44sp"
+                android:layout_marginVertical="10dp"/>
 
+            <ImageView
+                android:layout_width="300dp"
+                android:layout_height="300dp"
+                android:layout_gravity="center"
+                android:scaleType="fitXY"
+                android:src="@drawable/coach_vinoth"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:layout_marginVertical="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:drawableLeft="@drawable/baseline_email_24"
+                    android:layout_marginRight="15dp"
+                    android:text="Mail"
+                    android:id="@+id/navmail_vino"
+                    app:cornerRadius="2dp" />
+                <Button
+                    android:layout_marginVertical="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:drawableLeft="@drawable/ic_action_name"
+                    android:layout_marginRight="15dp"
+                    android:text="Github"
+                    android:id="@+id/navgit_vino"
+                    app:cornerRadius="2dp" />
+                <Button
+                    android:layout_marginVertical="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_gravity="center|end"
+                    android:layout_height="50dp"
+                    android:drawableLeft="@drawable/ic_action_linkedin"
+                    android:text="Linkedin"
+                    android:id="@+id/navlink_vino"
+                    app:cornerRadius="2dp" />
+            </LinearLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Skills"
+                android:textStyle="bold"
+                android:layout_marginVertical="10dp"
+                android:textSize="34sp"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <!--            Python-->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Python"
+                    android:layout_marginRight="15dp"
+                    android:textSize="24sp"/>
+
+                <ProgressBar
+                    android:id="@+id/v_pythonbar"
+                    style="@style/CustomProgressBar"
+                    android:layout_gravity="center"
+                    android:layout_width="240dp"
+                    android:layout_height="10dp" />
+            </LinearLayout>
+            <!--        Java-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Java"
+                    android:layout_marginRight="15dp"
+                    android:textSize="24sp"/>
+
+                <ProgressBar
+                    android:id="@+id/v_javabar"
+                    style="@style/CustomProgressBar"
+                    android:layout_gravity="center"
+                    android:layout_width="240dp"
+                    android:layout_height="10dp" />
+            </LinearLayout>
+            <!--        Android Studio-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Android Studio"
+                    android:layout_marginRight="15dp"
+                    android:textSize="24sp"/>
+
+                <ProgressBar
+                    android:id="@+id/v_androbar"
+                    style="@style/CustomProgressBar"
+                    android:layout_gravity="center"
+                    android:layout_width="240dp"
+                    android:layout_height="10dp" />
+            </LinearLayout>
+            <!--  Flutter      -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="DBMS"
+                    android:layout_marginRight="15dp"
+                    android:textSize="24sp"/>
+
+                <ProgressBar
+                    android:id="@+id/v_dbmsbar"
+                    style="@style/CustomProgressBar"
+                    android:layout_gravity="center"
+                    android:layout_width="240dp"
+                    android:layout_height="10dp" />
+            </LinearLayout>
+            <!--     React   -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Full Stack"
+                    android:layout_marginRight="15dp"
+                    android:textSize="24sp"/>
+
+                <ProgressBar
+                    android:id="@+id/v_fullstackbar"
+                    style="@style/CustomProgressBar"
+                    android:layout_gravity="center"
+                    android:layout_width="240dp"
+                    android:layout_height="10dp" />
+            </LinearLayout>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Projects"
+                android:textStyle="bold"
+                android:layout_marginVertical="10dp"
+                android:textSize="34sp"/>
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="500dp">
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="JAZZLE - E-commerce website"
+                                android:textSize="24sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Mebot Inc"
+                                android:textSize="14sp" />
+
+                            <ImageButton
+                                android:id="@+id/navproj_vino"
+                                android:layout_width="400dp"
+                                android:layout_height="400dp"
+                                android:layout_marginVertical="10dp"
+                                android:scaleType="fitXY"
+                                android:src="@drawable/a_v_projectlogo1" />
+
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            >
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="IRON JUNGLE - A Fitness Portfolio Webapp"
+                                android:textStyle="bold"
+                                android:textSize="24sp"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Mebot Inc"
+                                android:textSize="14sp"/>
+                            <ImageView
+                                android:layout_width="400dp"
+                                android:layout_height="400dp"
+                                android:scaleType="fitXY"
+                                android:src="@drawable/a_b_projectlogo2"/>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </HorizontalScrollView>
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
     </LinearLayout>
+</ScrollView>
 
 </LinearLayout>
