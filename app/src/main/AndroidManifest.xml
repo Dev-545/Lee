@@ -7,6 +7,8 @@
 
     <application
         android:allowBackup="true"
+        android:hardwareAccelerated="true"
+        android:largeHeap="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
         android:icon="@drawable/app_icon"
@@ -15,35 +17,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Lee"
         tools:targetApi="31">
-        <activity
-            android:name=".AboutScreen"
-            android:exported="false" />
-
-        <activity
-            android:name=".VerifyAccount"
-            android:exported="false"/>
-        <activity
-            android:name=".Edit"
-            android:exported="false" />
-        <activity
-            android:name=".Profile"
-            android:exported="false" />
-        <activity
-            android:name=".Activity_Cricket"
-            android:exported="false" />
-        <activity
-            android:name=".Activity_Soccer"
-            android:exported="false"
-            android:parentActivityName=".MainActivity" />
-        <activity
-            android:name=".SignupScreen"
-            android:exported="false" />
-        <activity
-            android:name=".LoginScreen"
-            android:exported="false" />
-        <activity
-            android:name=".Contact_form"
-            android:exported="false" />
+<!--OnBoarding Screen-->
         <activity
             android:name=".OnBoardingScreen"
             android:exported="true">
@@ -53,15 +27,76 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+<!--Login Screen-->
+        <activity
+            android:name=".LoginScreen"
+            android:exported="false" />
+<!--Signup Screen-->
+        <activity
+            android:name=".SignupScreen"
+            android:exported="false" />
+<!--MAin Activity-->
         <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+<!--About Screen-->
+        <activity
+            android:name=".AboutScreen"
+            android:exported="false" />
+<!--Profile Screen-->
+        <activity
+            android:name=".Profile"
+            android:exported="false" />
+<!--Edit Profile Screen-->
+        <activity
+            android:name=".Edit"
+            android:exported="false" />
+<!--Cricket-->
+        <activity
+            android:name=".Activity_Cricket"
+            android:exported="false"
+            android:parentActivityName=".MainActivity" />
+<!-- Football-->
+        <activity
+            android:name=".Activity_Soccer"
+            android:exported="false"
+            android:parentActivityName=".MainActivity" />
+<!--Badminton-->
+        <activity
+            android:name=".Activity_Batmiton"
+            android:exported="false"
+            android:parentActivityName=".MainActivity" />
+<!--Hockey-->
+        <activity
+            android:name=".Activity_Hockey"
+            android:exported="false"
+            android:parentActivityName=".MainActivity" />
+<!--Throwball-->
+        <activity
+            android:name=".Activity_Throwball"
+            android:exported="false"
+            android:parentActivityName=".MainActivity" />
+<!--Volleyball-->
+        <activity
+            android:name=".Activity_Volleyball"
+            android:exported="false"
+            android:parentActivityName=".MainActivity" />
+<!--VerifyAccount-->
+        <activity
+            android:name=".VerifyAccount"
+            android:exported="false" />
+<!--ContactForm-->
+
+        <activity
+            android:name=".Contact_form"
+            android:exported="false" />
+
+
     </application>
 
 </manifest>

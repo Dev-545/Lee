@@ -6,13 +6,16 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:layout_marginVertical="15dp"
     android:padding="15dp"
     tools:context=".AboutScreen">
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Developers Details"
-        android:textSize="44sp"/>
+        android:textAllCaps="true"
+        android:textStyle="bold"
+        android:textSize="34sp"/>
 <ScrollView
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -32,6 +35,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Balaji Kumar"
+            android:textColor="@color/Gold"
             android:textStyle="bold"
             android:textSize="44sp"
             android:layout_marginVertical="10dp"/>
@@ -51,9 +55,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="50dp"
                 android:drawableLeft="@drawable/baseline_email_24"
-                android:layout_marginRight="15dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="20dp"
                 android:id="@+id/navmail_bk"
-                android:text="Mail"
                 app:cornerRadius="2dp" />
             <Button
                 android:layout_marginVertical="10dp"
@@ -61,9 +65,8 @@
                 android:layout_height="50dp"
                 android:layout_gravity="center"
                 android:drawableLeft="@drawable/ic_action_name"
-                android:layout_marginRight="15dp"
+                android:layout_marginRight="20dp"
                 android:id="@+id/navgit_bk"
-                android:text="Github"
                 app:cornerRadius="2dp" />
             <Button
                 android:layout_marginVertical="10dp"
@@ -71,7 +74,6 @@
                 android:layout_gravity="center|end"
                 android:layout_height="50dp"
                 android:drawableLeft="@drawable/ic_action_linkedin"
-                android:text="Linkedin"
                 android:id="@+id/navlink_bk"
 
                 app:cornerRadius="2dp" />
@@ -79,6 +81,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textColor="@color/Dark_blue"
             android:text="Skills"
             android:textStyle="bold"
             android:layout_marginVertical="10dp"
@@ -201,6 +204,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:textColor="@color/Magenta"
                             android:text="JAZZLE - E-commerce website"
                             android:textSize="24sp"
                             android:textStyle="bold" />
@@ -208,6 +212,8 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:textColor="@color/dark_grey"
+                            android:textStyle="bold|italic"
                             android:text="Mebot Inc"
                             android:textSize="14sp" />
 
@@ -228,12 +234,15 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:textColor="@color/Magenta"
                             android:text="IRON JUNGLE - A Fitness Portfolio Webapp"
                             android:textStyle="bold"
                             android:textSize="24sp"/>
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:textColor="@color/dark_grey"
+                            android:textStyle="bold|italic"
                             android:text="Mebot Inc"
                             android:textSize="14sp"/>
                         <ImageView
@@ -256,6 +265,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Vinoth"
+                android:textColor="@color/Gold"
                 android:textStyle="bold"
                 android:textSize="44sp"
                 android:layout_marginVertical="10dp"/>
@@ -275,8 +285,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="50dp"
                     android:drawableLeft="@drawable/baseline_email_24"
-                    android:layout_marginRight="15dp"
-                    android:text="Mail"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginRight="20dp"
                     android:id="@+id/navmail_vino"
                     app:cornerRadius="2dp" />
                 <Button
@@ -285,8 +295,7 @@
                     android:layout_height="50dp"
                     android:layout_gravity="center"
                     android:drawableLeft="@drawable/ic_action_name"
-                    android:layout_marginRight="15dp"
-                    android:text="Github"
+                    android:layout_marginRight="20dp"
                     android:id="@+id/navgit_vino"
                     app:cornerRadius="2dp" />
                 <Button
@@ -295,13 +304,13 @@
                     android:layout_gravity="center|end"
                     android:layout_height="50dp"
                     android:drawableLeft="@drawable/ic_action_linkedin"
-                    android:text="Linkedin"
                     android:id="@+id/navlink_vino"
                     app:cornerRadius="2dp" />
             </LinearLayout>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:textColor="@color/Dark_blue"
                 android:text="Skills"
                 android:textStyle="bold"
                 android:layout_marginVertical="10dp"
@@ -424,13 +433,16 @@
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="JAZZLE - E-commerce website"
+                                android:text="Glow Organic - Satrtup website"
+                                android:textColor="@color/Magenta"
                                 android:textSize="24sp"
                                 android:textStyle="bold" />
 
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
+                                android:textColor="@color/dark_grey"
+                                android:textStyle="bold|italic"
                                 android:text="Mebot Inc"
                                 android:textSize="14sp" />
 
@@ -451,12 +463,15 @@
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
+                                android:textColor="@color/Magenta"
                                 android:text="IRON JUNGLE - A Fitness Portfolio Webapp"
                                 android:textStyle="bold"
                                 android:textSize="24sp"/>
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
+                                android:textColor="@color/dark_grey"
+                                android:textStyle="bold|italic"
                                 android:text="Mebot Inc"
                                 android:textSize="14sp"/>
                             <ImageView

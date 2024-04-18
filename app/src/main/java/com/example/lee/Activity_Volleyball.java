@@ -28,6 +28,8 @@ public class Activity_Volleyball extends AppCompatActivity {
         actionBar.setDisplayHomeAsUpEnabled(true);
         actionBar.setTitle("VolleyBall");
 
+
+
         button =findViewById(R.id.a_apply);
         String Activity = "Volleyball";
         button.setOnClickListener(new View.OnClickListener() {

@@ -7,6 +7,10 @@
     <style name="NavButton" parent="ThemeOverlay.AppCompat">
         <item name="colorAccent">@color/Blue</item>
     </style>
+    
+    <style name="menuitemcolor" parent="android:TextAppearance.Widget.IconMenu.Item">
+        <item name="android:actionMenuTextColor">@color/white</item>
+    </style>
 
     <style name="Theme.Lee" parent="Base.Theme.Lee" />
     <style name="DialogBox" parent="Theme.AppCompat.Dialog">

@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -19,6 +20,7 @@ import com.google.firebase.database.ValueEventListener;
 public class LoginScreen extends AppCompatActivity {
 
     TextInputEditText Phone_number,loginPassword;
+    TextView Error;
     Button SignIn, Submitbtn;
 
 
@@ -31,6 +33,7 @@ public class LoginScreen extends AppCompatActivity {
         loginPassword = findViewById(R.id.l_passwd);
         Submitbtn = findViewById(R.id.btn_submit);
         SignIn = findViewById(R.id.l_signin);
+        Error =findViewById(R.id.error_msg);
         Submitbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -67,6 +70,7 @@ public class LoginScreen extends AppCompatActivity {
         String val = loginPassword.getText().toString();
         if (val.isEmpty()) {
             loginPassword.setError("Password cannot be empty");
+            Error.setVisibility(View.VISIBLE);
             return false;
         } else {
             loginPassword.setError(null);

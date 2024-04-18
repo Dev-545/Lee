@@ -1,8 +1,10 @@
 package com.example.lee;
 
+import androidx.appcompat.app.ActionBar;
 import android.app.Dialog;
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.Html;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -40,6 +42,9 @@ public class MainActivity extends AppCompatActivity {
 
         toolbar= findViewById(R.id.appbar);
         setSupportActionBar(toolbar);
+        ActionBar actionBar =getSupportActionBar();
+//        actionBar.setTitle(Html.fromHtml("<b><font color='#FFFFFFFF>Lee</font></b>'"));
+
 
         cardView = findViewById(R.id.c);
 

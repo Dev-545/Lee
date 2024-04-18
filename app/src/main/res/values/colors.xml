@@ -2,6 +2,7 @@
 <resources>
     <color name="white">#FFFFFFFF</color>
     <color name="grey">#DDDDDD</color>
+    <color name="dark_grey">#787878</color>
     <color name="Blue">#03A9F4</color>
     <color name="Yellow">#e8e016</color>
     <color name="Skin">#F6E5D6</color>
@@ -9,8 +10,8 @@
     <color name="Dark_blue">#3533cd</color>
     <color name="Black">#080706</color>
     <color name="Orange">#ff5400</color>
-    <color name="Brown">#2e2016</color>
-    <color name="Magenta">#59362f</color>
+    <color name="Brown">#4C2102</color>
+    <color name="Magenta">#850808</color>
     <color name="Gold">#c38308</color>
 
 </resources>

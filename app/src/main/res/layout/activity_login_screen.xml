@@ -15,15 +15,14 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="30dp"
-        app:cardCornerRadius="30dp"
-        app:cardElevation="40dp">
+        app:cardCornerRadius="0dp"
+        app:cardElevation="20dp">
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:layout_gravity="center_horizontal"
-            android:padding="24dp"
-            android:background="@drawable/red_boarder">
+            android:padding="24dp">
 
             <TextView
                 android:layout_width="match_parent"
@@ -71,6 +70,13 @@
                     android:drawablePadding="1dp"
                     android:maxLength="10" />
             </com.google.android.material.textfield.TextInputLayout>
+            <TextView
+                android:id="@+id/error_msg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Enter the Correct Password"
+                android:textColor="@color/Red"
+                android:visibility="gone"/>
 
 
             <Button

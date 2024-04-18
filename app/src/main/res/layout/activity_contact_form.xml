@@ -13,16 +13,15 @@
 
     <androidx.cardview.widget.CardView
         android:layout_width="375dp"
-        android:layout_height="610dp"
-        android:layout_margin="30dp"
-        app:cardCornerRadius="30dp"
-        app:cardElevation="40dp">
+        android:layout_height="680dp"
+        android:layout_margin="20dp"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="20dp">
 
         <LinearLayout
             android:layout_width="375dp"
-            android:layout_height="610dp"
+            android:layout_height="match_parent"
             android:layout_gravity="center_horizontal"
-            android:background="@drawable/red_boarder"
             android:orientation="vertical"
             android:padding="24dp">
 
@@ -31,7 +30,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:layout_marginBottom="10dp"
+                android:layout_marginBottom="30dp"
                 android:text="@string/contact"
                 android:textColor="@color/Red"
                 android:textSize="36dp"
@@ -39,7 +38,8 @@
 
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/c_name"
@@ -54,39 +54,45 @@
 
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/c_age"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:drawableLeft="@drawable/baseline_age_pin_24"
-                    android:inputType="number"
                     android:drawablePadding="8dp"
-                    android:hint="@string/age" />
+                    android:hint="@string/age"
+                    android:inputType="number" />
             </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/s_gender"
+                android:textSize="16sp" />
 
             <RadioGroup
                 android:id="@+id/radio_gender"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
                 android:orientation="horizontal">
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/s_gender" />
 
                 <com.google.android.material.radiobutton.MaterialRadioButton
                     android:id="@+id/c_r_male"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginRight="25dp"
                     android:text="Male" />
 
                 <com.google.android.material.radiobutton.MaterialRadioButton
                     android:id="@+id/c_r_female"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginRight="25dp"
                     android:text="Female" />
 
                 <com.google.android.material.radiobutton.MaterialRadioButton
@@ -98,7 +104,8 @@
 
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/c_activity"
@@ -112,7 +119,8 @@
 
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/c_mail"

@@ -5,6 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:paddingTop="17dp"
     android:orientation="vertical"
 
     tools:context=".Activity_Cricket">
@@ -30,8 +31,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/Sp_cricket"
+            android:textAllCaps="true"
             android:textStyle="bold"
-            android:textColor="@color/Dark_blue"
+            android:textColor="@color/Black"
             android:layout_margin="5dp"
             android:textSize="55sp"/>
         <TextView
@@ -40,7 +42,7 @@
             android:text="@string/cric_desc"
             android:justificationMode="inter_word"
             android:layout_margin="5dp"
-            android:textColor="@color/Dark_blue"
+            android:textColor="@color/Magenta"
             android:textSize="15sp"/>
         <TextView
             android:layout_width="wrap_content"
@@ -83,17 +85,20 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="D. Vinoth"
+                            android:textColor="@color/Gold"
                             android:textStyle="bold"
                             android:textSize="45dp"/>
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="@string/coach"
-                            android:textStyle="italic"
+                            android:textStyle="italic|bold"
+                            android:textColor="@color/dark_grey"
                             android:textSize="15sp"/>
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:textColor="@color/Brown"
                             android:text="Vice Captain of Tamilnadu T20 League 2020"
                             android:textSize="15dp"/>
                     </LinearLayout>
@@ -112,18 +117,21 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:textColor="@color/Gold"
                             android:text="Balaji Kumar"
                             android:textStyle="bold"
                             android:textSize="45dp"/>
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:textColor="@color/dark_grey"
                             android:text="@string/coach"
-                            android:textStyle="italic"
+                            android:textStyle="italic|bold"
                             android:textSize="15dp"/>
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:textColor="@color/Brown"
                             android:text="Captain of Tamilnadu T20 League 2022"
                             android:textSize="15dp"/>
                     </LinearLayout>
@@ -170,18 +178,20 @@
             android:text="Timings"
             android:layout_margin="5dp"
             android:textStyle="bold"
-            android:textColor="@color/Dark_blue"
+            android:textColor="@color/Black"
             android:textSize="35dp"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textColor="@color/Black"
             android:text="@string/cric_tym"
-            android:textColor="@color/Dark_blue"
+
             android:textSize="15dp"/>
         <Button
             android:id="@+id/a_apply"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+
             android:text="@string/nav_contact"/>
     </LinearLayout>
     </ScrollView>
