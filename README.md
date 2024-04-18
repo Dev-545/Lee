@@ -23,3 +23,6 @@ We try to Create a Proffessional Application for an Unreal Academy with Database
 - Edit Profile Page (Users can Edit their Credentials, Changes can automatically refelect on Firebaase)
 - Whats New Popup(Future Enhancement We Planned up for the Project)
 - About Page (Developer Details  and Thier work means to contact them)
+## Installation
+- After Cloning the Project
+  - Create a local.properties and add your SDK location Details
