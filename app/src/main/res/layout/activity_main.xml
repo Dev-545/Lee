@@ -15,7 +15,6 @@
         android:orientation="vertical"
         >
 
-        <!-- Cricket       -->
 
         <include layout="@layout/appbar" />
 
@@ -30,10 +29,9 @@
 
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:src="@drawable/cricket_bg"
+                android:src="@drawable/bg_cricket"
                 android:adjustViewBounds="true"
                 android:scaleType="centerCrop"/>
-
 
             <Button
                 android:id="@+id/nav_cricket"
@@ -52,7 +50,7 @@
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:src="@drawable/soccer_bg"
+                android:src="@drawable/bg_soccer"
                 android:adjustViewBounds="true"
                 android:scaleType="centerCrop"/>
 
@@ -74,10 +72,9 @@
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:src="@drawable/hockey_bg"
+                android:src="@drawable/bg_hockey"
                 android:adjustViewBounds="true"
                 android:scaleType="centerCrop"/>
-
 
             <Button
                 android:id="@+id/nav_hockey"
@@ -96,10 +93,9 @@
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:src="@drawable/throwball_bg"
+                android:src="@drawable/bg_throwball"
                 android:adjustViewBounds="true"
                 android:scaleType="centerCrop"/>
-
 
         <Button
             android:id="@+id/nav_throwball"
@@ -114,13 +110,13 @@
             android:layout_height="172dp"
             android:layout_marginVertical="15dp"
             app:cardCornerRadius="10px">
+
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:src="@drawable/badminton_bg"
+                android:src="@drawable/bg_badminton"
                 android:adjustViewBounds="true"
                 android:scaleType="centerCrop"/>
-
 
             <Button
                 android:id="@+id/nav_badminton"
@@ -135,14 +131,13 @@
             android:layout_height="172dp"
             android:layout_marginVertical="15dp"
             app:cardCornerRadius="10px"
-            android:background="@drawable/cricket_bg">
+            >
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:src="@drawable/volleyball_bg"
+                android:src="@drawable/bg_volleyball"
                 android:adjustViewBounds="true"
                 android:scaleType="centerCrop"/>
-
 
             <Button
                 android:id="@+id/nav_volleyball"
